@@ -11,6 +11,6 @@ setup(
 	install_requires=['Click'],
 	entry_points='''
 		[console_scripts]
-		clitask=clitask:run
+		clitask=clitask:main
 		'''
 	)

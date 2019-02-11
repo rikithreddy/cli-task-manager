@@ -2,7 +2,7 @@ import click
 from lib import utils
 
 @click.group()
-def run():
+def main():
 	utils.init()
 	pass
 @run.command()
@@ -23,4 +23,4 @@ def edit():
 
 
 if __name__ == '__main__':
-	run()
+	main()
