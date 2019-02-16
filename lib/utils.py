@@ -3,6 +3,7 @@ BASE_DIR = "clitask/"
 DATA_DIR = path.join(BASE_DIR , 'data')
 CONFIG_DIR = path.join(BASE_DIR , 'config')
 DATA_FILE = path.join(DATA_DIR , 'task.csv')
+
 def init():
 	if not path.exists(BASE_DIR):
 		makedirs(BASE_DIR)
@@ -14,7 +15,3 @@ def init():
 		makedirs(CONFIG_DIR)
 
 	open(DATA_FILE, 'a').close()
-
-def touch(path):
-    with open(path, 'a'):
-        utime(path, None)
