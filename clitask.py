@@ -5,19 +5,21 @@ from lib import utils
 def main():
 	utils.init()
 	pass
-@run.command()
+@main.command()
+
 
 def add():
 	click.echo("Add command")
 
 
-@run.command()
-def list():
+@main.command()
+def list(list):
+	if list:
+		click.echo("You dont have any entries as of now :)")
 	click.echo("List command")
 
 
-
-@run.command()
+@main.command()
 def edit():
 	click.echo("Edit command")
 
