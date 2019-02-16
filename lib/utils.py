@@ -2,7 +2,6 @@ from os import mkdir, path, makedirs
 import os
 
 # Global constants required for the application
-
 USER_HOME = os.getenv("HOME")
 BASE_DIR = os.path.join(USER_HOME, '.clitask')
 DATA_DIR = os.path.join(BASE_DIR , 'data')
@@ -23,6 +22,7 @@ def init():
 
 	create_task_datafile()
 
+# Creates a the data file required by the application
 def create_task_datafile():
 	headers = get_data_column_list()
 	if not os.path.exists(DATA_FILE):
