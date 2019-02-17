@@ -1,5 +1,5 @@
 import click
-from lib import utils
+from lib import utils, listfunc
 
 @click.group()
 def main():
@@ -13,11 +13,8 @@ def add():
 
 
 @main.command()
-def list(list):
-	if list:
-		click.echo("You dont have any entries as of now :)")
-	click.echo("List command")
-
+def list():
+	listfunc.list_all()
 
 @main.command()
 def edit():
