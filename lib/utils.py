@@ -1,6 +1,5 @@
 import os
-from constants import *
-
+from lib.constants import *
 # The function initialises all the nessessary directories required by the application
 def init():
 	if not os.path.exists(BASE_DIR):

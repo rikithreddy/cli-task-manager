@@ -1,6 +1,6 @@
 import pandas as pd
 import click
-from constants import *
+from lib.constants import *
 
 
 # Loads and returns the user datafile
