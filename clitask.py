@@ -1,6 +1,5 @@
 import click
 from lib import utils, listfunc
-
 @click.group()
 def main():
 	utils.init()
