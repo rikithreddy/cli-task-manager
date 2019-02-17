@@ -7,7 +7,7 @@ from setuptools import setup
 setup(
 	name="cli-task",
 	version=1.0,
-	install_requires=['Click', 'pandas'],
+	install_requires=['Click', 'pandas', 'numpy'],
 	entry_points='''
 		[console_scripts]
 		clitask=clitask:main
