@@ -1,23 +1,15 @@
-from os import mkdir, path, makedirs
 import os
-
-# Global constants required for the application
-USER_HOME = os.getenv("HOME")
-BASE_DIR = os.path.join(USER_HOME, '.clitask')
-DATA_DIR = os.path.join(BASE_DIR , 'data')
-CONFIG_DIR = os.path.join(BASE_DIR , 'config')
-DATA_FILE = os.path.join(DATA_DIR , 'task.csv')
-
+from constants import *
 
 # The function initialises all the nessessary directories required by the application
 def init():
-	if not path.exists(BASE_DIR):
+	if not os.path.exists(BASE_DIR):
 		os.makedirs(BASE_DIR)
 
-	if not path.exists(DATA_DIR):
+	if not os.path.exists(DATA_DIR):
 		os.makedirs(DATA_DIR)
 
-	if not path.exists(CONFIG_DIR):
+	if not os.path.exists(CONFIG_DIR):
 		os.makedirs(CONFIG_DIR)
 
 	create_task_datafile()
